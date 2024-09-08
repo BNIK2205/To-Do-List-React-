@@ -1,38 +1,147 @@
+/* Import Kalnia Glaze Font */
+@import url('https://fonts.googleapis.com/css2?family=Kalnia+Glaze:wght@100..700&display=swap');
+
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+  font-family: 'Poppins', sans-serif;
+  background: rgb(174,209,238);
+  background: radial-gradient(circle, rgba(174,209,238,1) 0%, rgba(212,148,233,1) 100%);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  padding: 20px;
+  color: #fff;
+}
+
+.header {
+  margin-bottom: 30px;
+}
+
+h1 {
+  font-family: 'Kalnia Glaze', serif;
+  font-optical-sizing: auto;
+  font-weight: 500; 
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  font-size: 2.5rem;
+  margin: 0;
+  padding: 0;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.language-switcher {
+  margin: 20px;
+}
+
+.language-switcher button {
+  background-color: #ff7eb3;
   color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  margin: 0 5px;
 }
 
-.App-link {
-  color: #61dafb;
+.language-switcher button:hover {
+  background-color: #ff758c;
+  transform: scale(1.05);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.add-todo {
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.add-todo input {
+  padding: 12px;
+  width: 250px;
+  border: none;
+  border-radius: 20px;
+  outline: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.add-todo button {
+  padding: 12px 20px;
+  background-color: #ff7eb3;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.add-todo button:hover {
+  background-color: #ff758c;
+  transform: scale(1.05);
+}
+
+.todo-list {
+  list-style-type: none;
+  padding: 0;
+  max-width: 400px;
+  width: 100%;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.todo-list li {
+  background-color: rgba(92, 92, 92, 0.8);
+  padding: 10px;
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.todo-list li:hover {
+  transform: translateX(10px);
+}
+
+.todo-list li.completed span {
+  text-decoration: line-through;
+  color: #2c2b2b;
+}
+
+.todo-list span {
+  cursor: pointer;
+}
+
+.delete-btn {
+  background-color: #ff3b3b;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 5px 15px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.delete-btn:hover {
+  background-color: #d73232;
+  transform: scale(1.1);
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
   }
-  to {
-    transform: rotate(360deg);
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
